@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d372bb5ed3047154aa75062e239af34f, type: 3}
+  m_Name: HierarchyData
+  m_EditorClassIdentifier: 
+  m_HierarchyTagsIcons:
+  - Tag: Untagged
+    Icon: {fileID: 2800000, guid: 64b8d597facc6ca498c08896d455aa46, type: 3}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: Respawn
+    Icon: {fileID: 0}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: Finish
+    Icon: {fileID: 0}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: EditorOnly
+    Icon: {fileID: 0}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: MainCamera
+    Icon: {fileID: 2800000, guid: 746d93dea2799f144833bb34f40b191b, type: 3}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: Player
+    Icon: {fileID: 2800000, guid: 65b1ab542a5addb418188c66830954e4, type: 3}
+    TintColor: {r: 0.9528302, g: 0.75513613, b: 0.112362035, a: 1}
+  - Tag: GameController
+    Icon: {fileID: 2800000, guid: f3cf58ca8ec3c704789325de3c26d6e9, type: 3}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: NetworkPlayer
+    Icon: {fileID: 0}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  - Tag: Vehicle
+    Icon: {fileID: 0}
+    TintColor: {r: 1, g: 1, b: 1, a: 1}
+  ShowIcons: 1
+  HorizontalPosition: 0
