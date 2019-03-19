@@ -18,6 +18,11 @@ public class Attribute : MonoBehaviour
     public int antiWater;
     public int antiLightning;
 
+    public int current_burningAccum;//当前灼烧叠加数
+    public int max_buringAccum = 1;//最大灼烧叠加层数
+    public int current_flameAccum;//当前引燃层数
+    public int max_flameAccum = 1;//最大引燃层数
+
     public string type = CharacterType.enemy;
 
     private void Start()
@@ -34,12 +39,12 @@ public class Attribute : MonoBehaviour
         }
     }
 
-    public void Burning(float m_damange,float m_duration)
+    public virtual void Burning(float m_damange,float m_duration)
     {
         StartCoroutine(BurningDuration(m_damange,m_duration));
     }
 
-    IEnumerator BurningDuration(float m_damange, float m_duration)
+    public virtual IEnumerator BurningDuration(float m_damange, float m_duration)
     {
         for (int i = 0; i < m_duration; i++)
         {
