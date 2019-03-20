@@ -791,11 +791,13 @@ MonoBehaviour:
   antiFire: 0
   antiWater: 0
   antiLightning: 0
-  current_burningAccum: 0
-  max_buringAccum: 1
-  current_flameAccum: 0
-  max_flameAccum: 1
   type: PlayerType
+  buff:
+    current_burningAccum: 0
+    max_buringAccum: 1
+    current_flameAccum: 0
+    max_flameAccum: 1
+    BuffsContainer: []
   fireRate: 0.5
   ammoCapacity: 2
 --- !u!114 &1139381945
@@ -1490,11 +1492,13 @@ MonoBehaviour:
   antiFire: 0
   antiWater: 0
   antiLightning: 0
-  current_burningAccum: 0
-  max_buringAccum: 1
-  current_flameAccum: 0
-  max_flameAccum: 3
   type: EnemyType
+  buff:
+    current_burningAccum: 0
+    max_buringAccum: 3
+    current_flameAccum: 0
+    max_flameAccum: 1
+    BuffsContainer: []
 --- !u!4 &2002375462
 Transform:
   m_ObjectHideFlags: 0

@@ -6,10 +6,10 @@ public class LauncherController : BaseFireTemplate
 {
     public Transform muzzle;
     public GameObject bullet;
-    public Stack<GameObject> magazine = new Stack<GameObject>();
     PlayerAttribute attribute;
 
     public List<GameObject> arsenal;
+    public List<string> magazine = new List<string>();
 
     int max_magezine;
     // Start is called before the first frame update
@@ -31,7 +31,7 @@ public class LauncherController : BaseFireTemplate
     {
         if (magazine.Count<max_magezine)
         {
-            magazine.Push(m_bullet);
+            //magazine.Add(m_bullet);
             LauncherUIManager.instance.UILoadAmmo(m_bullet);
         }
     }
@@ -49,7 +49,7 @@ public class LauncherController : BaseFireTemplate
             {
                 throw new System.Exception("n is out of the index of arsenal, make sure n is within");
             }
-            magazine.Push(arsenal[n]);
+            //magazine.Push(arsenal[n]);
             LauncherUIManager.instance.UILoadAmmo(arsenal[n]);
         }
     }
@@ -57,6 +57,11 @@ public class LauncherController : BaseFireTemplate
     public void SetMaxMagazine(int m)
     {
         max_magezine = m;
+    }
+
+    void PopBullet()
+    {
+
     }
 
     #region//block overrided
@@ -72,9 +77,9 @@ public class LauncherController : BaseFireTemplate
         //shot special ammo
         else
         {
-            GameObject m_specialBullet = Instantiate((GameObject)magazine.Pop(), muzzle.position, transform.rotation);
-            m_specialBullet.GetComponent<Bullet>().InitializeBullet(attribute, CharacterType.enemy);
-            LauncherUIManager.instance.UIShootAmmo();
+            //GameObject m_specialBullet = Instantiate((GameObject)magazine.Pop(), muzzle.position, transform.rotation);
+            //m_specialBullet.GetComponent<Bullet>().InitializeBullet(attribute, CharacterType.enemy);
+            //LauncherUIManager.instance.UIShootAmmo();
         }
     }
 
