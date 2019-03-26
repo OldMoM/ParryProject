@@ -18,12 +18,10 @@ public class Attribute : MonoBehaviour
     public int antiWater;
     public int antiLightning;
 
-    public int current_burningAccum;//当前灼烧叠加数
-    public int max_buringAccum = 1;//最大灼烧叠加层数
-    public int current_flameAccum;//当前引燃层数
-    public int max_flameAccum = 1;//最大引燃层数
 
     public string type = CharacterType.enemy;
+
+    public Buffs buff = new Buffs();
 
     private void Start()
     {

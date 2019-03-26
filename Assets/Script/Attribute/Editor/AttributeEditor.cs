@@ -12,14 +12,20 @@ public class AttributeEditor : Editor
     protected bool m_defenseAttribute;
     protected bool m_BuffSetting;
 
+
     private void OnEnable()
     {
-        attribute = (Attribute)target;
+        InitializeEditor();
     }
 
     public override void OnInspectorGUI()
     {
         DrawGUIAttribute(attribute);
+    }
+
+    public virtual void InitializeEditor()
+    {
+        attribute = (Attribute)target;
     }
 
     public virtual void DrawGUIAttribute(Attribute m_attribute)
@@ -59,13 +65,17 @@ public class AttributeEditor : Editor
         }
         EditorGUILayout.Space();
 
-        m_BuffSetting = EditorGUILayout.Foldout(m_BuffSetting, "Buff属性设置");
+        m_BuffSetting = EditorGUILayout.Foldout(m_BuffSetting, "Buff属性设置与查看");
         if (m_BuffSetting)
         {
-            //m_attribute.current_burningAccum = 
-            EditorGUILayout.IntField("当前灼烧层数", m_attribute.current_burningAccum);
-            m_attribute.max_flameAccum = EditorGUILayout.IntField("最大灼烧层数", m_attribute.max_flameAccum);
+            m_attribute.buff.max_buringAccum = EditorGUILayout.IntField("灼烧最大叠加数", m_attribute.buff.max_buringAccum);
+            EditorGUILayout.IntField("当前灼烧叠加数（只读）", m_attribute.buff.current_burningAccum);
+            m_attribute.buff.max_flameAccum = EditorGUILayout.IntField("引燃最大叠加数", m_attribute.buff.max_flameAccum);
+            EditorGUILayout.IntField("当前引燃叠加数（只读）", m_attribute.buff.current_flameAccum);
         }
+        EditorGUILayout.Space();
+
+
         serializedObject.ApplyModifiedProperties();
         EditorGUILayout.EndVertical();
     }

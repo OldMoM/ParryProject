@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Attribute\Attribute.cs" />
+    <Compile Include="Assets\Script\Attribute\Buffs.cs" />
     <Compile Include="Assets\Script\Attribute\PlayerAttribute.cs" />
     <Compile Include="Assets\Script\Bullet\Bullet.cs" />
     <Compile Include="Assets\Script\Bullet\FireBullet.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Script\System\Level\LevelGenerator.cs" />
     <Compile Include="Assets\Script\Templates\MotherTemplate\BaseFireTemplate.cs" />
     <Compile Include="Assets\Script\UI\LauncherUIManager.cs" />
+    <Compile Include="Assets\Script\UI\PlayerUIManager.cs" />
     <Compile Include="Assets\Script\Utility\TestButtons\TestButton.cs" />
     <None Include="Assets\HierarchyTagIcon\ReadMe.txt" />
     <None Include="Assets\游戏设计文档\设计日志.txt" />

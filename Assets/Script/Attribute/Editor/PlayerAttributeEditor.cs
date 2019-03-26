@@ -14,12 +14,17 @@ public class PlayerAttributeEditor : AttributeEditor
 
     private void OnEnable()
     {
-        attribute = (PlayerAttribute)target;
+        InitializeEditor();
     }
 
     public override void OnInspectorGUI()
     {
         DrawGUIAttribute(attribute);
+    }
+
+    public override void InitializeEditor()
+    {
+        attribute = (PlayerAttribute)target;
     }
 
     public override void DrawGUIAttribute(Attribute m_attribute)
@@ -42,4 +47,5 @@ public class PlayerAttributeEditor : AttributeEditor
             m_attribute.Burning(buringDamage, buringDuration);
         }
     }
+
 }
